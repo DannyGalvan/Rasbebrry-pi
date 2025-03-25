@@ -1,6 +1,6 @@
 # Proyecto de Medición de Temperatura con NTC y LCD
 
-Este proyecto utiliza un **termistor NTC** para medir la temperatura en un circuito conectado a un **Arduino** y mostrar el **voltaje** y la **temperatura** en un **display LCD**. El termistor NTC cambia su resistencia en función de la temperatura, y el Arduino lo lee a través de un pin analógico. El valor leído se convierte en una temperatura en grados Celsius y se muestra en el LCD.
+Este proyecto utiliza un **termistor NTC** para medir la temperatura en un circuito conectado a un **Rasberry Pi** y mostrar el **voltaje** y la **temperatura** en un **display LCD**. El termistor NTC cambia su resistencia en función de la temperatura, y el Arduino lo lee a través de un pin analógico. El valor leído se convierte en una temperatura en grados Celsius y se muestra en el LCD.
 
 ## Componentes Necesarios
 
