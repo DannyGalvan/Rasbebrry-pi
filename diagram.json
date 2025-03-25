@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 125.5,
+      "left": 132.45,
+      "rotate": 90,
+      "attrs": { "env": "arduino-community" }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -15.77, "left": 35.2, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 114.8,
+      "left": 226.31,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 290.6,
+      "left": -96.6,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pico:GND.1", "lcd:VSS", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "pico:GND.1", "lcd:K", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "pico:GND.1", "lcd:RW", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "pico:VSYS", "lcd:VDD", "red", [ "v16", "h-16" ] ],
+    [ "pico:VSYS", "r1:2", "red", [ "v16", "h0" ] ],
+    [ "r1:1", "lcd:A", "pink", [] ],
+    [ "pico:GP12", "lcd:RS", "blue", [ "v-16", "*", "h0", "v20" ] ],
+    [ "pico:GP11", "lcd:E", "purple", [ "v-20", "*", "h0", "v20" ] ],
+    [ "pico:GP10", "lcd:D4", "green", [ "v-24", "*", "h0", "v20" ] ],
+    [ "pico:GP9", "lcd:D5", "brown", [ "v-28", "*", "h0", "v20" ] ],
+    [ "pico:GP8", "lcd:D6", "gold", [ "v-32", "*", "h0", "v20" ] ],
+    [ "pico:GP7", "lcd:D7", "gray", [ "v-36", "*", "h0", "v20" ] ],
+    [ "pico:3V3", "ntc1:VCC", "red", [ "v0" ] ],
+    [ "pico:GP26", "ntc1:OUT", "gold", [ "v0" ] ],
+    [ "ntc1:GND", "pico:GND.7", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
